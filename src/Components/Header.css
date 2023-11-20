@@ -10,9 +10,10 @@
 
 .link-header {
   text-decoration: none;
-  color: #212125;
+  color: #000;
   font-weight: 300;
   font-size: 1.2rem;
+  font-family: 'Poppins';
   transition: transform .1s;
 }
 
@@ -37,11 +38,12 @@
 }
 
 .content-before-nav-header > :nth-child(-n + 4) { 
-  color: #cfd6e1;
+  color: var(--text-light);
+  font-family: 'Poppins';
 }
 
 .main-content-header { 
-  background-color: #fff;
+  background: linear-gradient( #fff, #ccc); 
   padding: .5em 0;
 }
 

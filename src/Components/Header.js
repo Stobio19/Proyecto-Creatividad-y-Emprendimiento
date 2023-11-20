@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../App.css"; 
 
 export const Header = () => {
   return (

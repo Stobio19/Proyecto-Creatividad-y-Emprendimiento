@@ -1,0 +1,121 @@
+@import "../App.css";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.title-about {
+  text-align: center;
+  margin: 0;
+  font-size: 3.125rem;
+  font-weight: 500;
+}
+
+.__div-section-1 {
+  background: var(--section-1-about-background);
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  min-height: 30rem;
+  justify-content: space-evenly;
+}
+
+.__div-section-1 > :nth-child(-n + 2) {
+  margin: 0 2rem 0 2rem;
+  padding: 2rem;
+}
+
+.container-about-section-1 {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.container-about-section-1 h2 {
+  font-size: 2vw;
+  margin: 0;
+}
+
+.container-about-section-1 p {
+  line-height: 2;
+  font-size: 1.5vw;
+  display: flex;
+}
+
+.__div-section-2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5rem !important;
+  padding-bottom: 3rem !important;
+  background: #fff;
+  width: auto;
+  height: 30rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+.__div-section-2 h2 {
+  font-family: "Poppins";
+}
+
+.__div-section-2 p {
+  font-family: "Poppins";
+}
+
+.__div-section-2 > div {
+  flex-wrap: wrap;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.__div_section-2-father-about {
+  display: flex;
+  background: #fff;
+  width: calc(1275 / 16);
+  height: 15.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.__div_section-2-father-about > div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5625rem;
+  width: 16.5rem;
+  height: 13.5rem;
+}
+
+.__div_section-2-child-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.transition-section-2-about {
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.transition-section-2-about:hover { 
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.about-icons-section-2 {
+  height: 3.75rem;
+  color: #000;
+}
+
+.__div_section-2-child-about > div {
+  margin-top: 17%;
+}
+
+.about-services-section-2 {
+  font-size: 1.5rem;
+  margin-top: 0.75rem;
+  font-weight: 500;
+}

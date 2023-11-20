@@ -1,0 +1,63 @@
+.title-storage { 
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+.text-align-center { 
+    text-align: center;
+}
+
+.storage-content { 
+    margin: auto;
+    padding: 1em;
+    background: #fff;
+    max-width: 90vw;
+    display: flex;
+    gap: 1em; 
+    flex-direction: column;
+    border-radius: .2em;
+}
+
+.storage-item { 
+    border: 0.0625rem solid #ccc;
+    padding: 1em;
+    background: #f7f7f7
+}
+
+.storage-item > h2 {
+    margin-top: 0;
+}
+
+.storage-item > p { 
+    margin-bottom: 0;
+}
+
+.storage-item > span { 
+    font-weight: 600;
+    display: block;
+    margin: 1em 0;
+}
+
+.input-password { 
+    background: inherit;
+    border: none;
+    font-size: medium;
+}
+
+.input-password:focus, .input-password:active { 
+    background: inherit;
+    outline: none;
+}
+
+.icon-eye { 
+    color: #777;
+    cursor: pointer;
+    margin: 0 .5em;
+}
+
+.icon-eye:hover { 
+    color: #000;
+}
+
+
+
