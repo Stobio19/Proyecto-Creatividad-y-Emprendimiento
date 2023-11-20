@@ -1,0 +1,50 @@
+.Header {
+  width: 100%;
+  flex: 0 0 12vh;
+}
+
+.nav { 
+  display: flex;
+  gap: 1rem;
+}
+
+.link-header {
+  text-decoration: none;
+  color: #212125;
+  font-weight: 300;
+  font-size: 1.2rem;
+  transition: transform .1s;
+}
+
+.link-header:hover { 
+  transform: scale(1.1);
+}
+
+.nav-before-header { 
+  background: #212125;
+}
+
+.content-before-nav-header { 
+  display: flex;
+  align-items: center;
+  gap: .7em;
+  margin-left: 1em;
+  padding: .5em;
+}
+
+.content-before-nav-header > :nth-child(odd) { 
+  cursor: pointer;
+}
+
+.content-before-nav-header > :nth-child(-n + 4) { 
+  color: #cfd6e1;
+}
+
+.main-content-header { 
+  background-color: #fff;
+  padding: .5em 0;
+}
+
+.nav { 
+  margin-left: 1em;
+}

@@ -1,0 +1,15 @@
+.App-footer {
+  background: transparent;
+  width: 100%;
+  flex: 0 0 12vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.App-footer > span {
+  color: #f5f5f5;
+  position: absolute;
+  left: 2rem;
+}
