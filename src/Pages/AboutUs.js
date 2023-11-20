@@ -15,12 +15,13 @@ export const AboutUs = () => {
         <div className="container-about-section-1">
           <h2>About Us</h2>
           <p>
-            Dear customers, It is a pleasure to introduce you to our electronic
-            products sales company. In our online store, we offer a wide variety
-            of high-quality electronic products, from mobile phones to smart TVs
-            and audio devices
+            Dear costumers, we strive to offer the highest quality. A secure
+            password generator is a tool that creates random combinations of
+            characters, numbers, and symbols to generate highly secure
+            passwords. These passwords are designed to be difficult to crack
+            through brute force methods or dictionary attacks.
           </p>
-          </div>
+        </div>
       </section>
       <section className="__div-section-2">
         <div>
