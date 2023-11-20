@@ -35,7 +35,7 @@ export const Home = () => {
       setShowAnnouncement(true);
       setTimeout(() => {
         setShowAnnouncement(false);
-      }, 6000);
+      }, 10000);
     } else {
       alert("¡Please, fill the fields!");
     }
