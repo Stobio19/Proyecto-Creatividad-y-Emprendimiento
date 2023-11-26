@@ -23,3 +23,8 @@
 :root { 
   --text-light: #cfd6e1;
 }
+
+@media screen and (min-width: 260px) and (max-width: 600px) {
+  .main-content {
+  }
+}

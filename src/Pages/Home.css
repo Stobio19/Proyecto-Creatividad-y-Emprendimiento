@@ -1,8 +1,4 @@
 .home-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .div-main-form {
@@ -14,9 +10,7 @@
   width: max-content;
   height: auto;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  margin: 3rem auto 0 auto;
 }
 
 .div-main-form > h1 { 
@@ -106,4 +100,22 @@
 
 .close-modal:hover {
   color: #e00;
+}
+
+@media screen and (min-width: 260px) and (max-width: 600px)
+{
+  .home-content { 
+   padding: 2rem;
+   min-height: max-content;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+
+  .div-main-form {
+    padding: 2rem;
+    min-width: 15rem; 
+  }
+  
 }

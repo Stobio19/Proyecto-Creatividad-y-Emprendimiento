@@ -44,20 +44,17 @@
 .__div-section-2 {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 5rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   background: #fff;
   width: auto;
-  height: 30rem;
+  overflow-y: auto;
+  min-height: max-content;
   text-align: center;
   flex-direction: column;
 }
 
-.__div-section-2 h2 {
-  font-family: "Poppins";
-}
-
-.__div-section-2 p {
+.__div-section-2 h2, p  {
   font-family: "Poppins";
 }
 
@@ -72,7 +69,7 @@
 .__div_section-2-father-about {
   display: flex;
   background: #fff;
-  width: calc(1275 / 16);
+  width: 79,6875rem; 
   height: 15.75rem;
   align-items: center;
   justify-content: center;
@@ -118,4 +115,23 @@
   font-size: 1.5rem;
   margin-top: 0.75rem;
   font-weight: 500;
+}
+
+@media screen and (min-width: 260px) and (max-width: 600px) {
+  .div-section-2 { 
+    background: #b00;
+  }
+
+  .container-about-section-1 h2 {
+    font-size: large;
+    margin: 0;
+  }
+  
+  .container-about-section-1 p {
+    line-height: 2;
+    font-size: large;
+  }
+
+  
+  
 }

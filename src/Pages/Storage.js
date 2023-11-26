@@ -24,7 +24,7 @@ export const Storage = () => {
   };
 
   return (
-    <div>
+    <div className="storage">
       <h1 className="title-storage text-align-center">Your Data!</h1>
       <div className="storage-content">
         {passwords.map((password, index) => (

@@ -50,3 +50,19 @@
 .nav { 
   margin-left: 1em;
 }
+
+@media screen and (min-width: 260px) and (max-width: 600px) { 
+  .main-content-header {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav { 
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .link-header {
+    font-size: large;
+  }
+}
