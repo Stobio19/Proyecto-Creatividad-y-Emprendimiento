@@ -6,6 +6,8 @@ import {
   faExchangeAlt,
   faPercent,
   faUser,
+  faMicrochip,
+  faQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const AboutUs = () => {
@@ -38,22 +40,22 @@ export const AboutUs = () => {
             <div className="__div_section-2-child-about">
               <div>
                 <FontAwesomeIcon
-                  icon={faTruck}
+                  icon={faMicrochip}
                   className="about-icons-section-2"
                 />
               </div>
-              <h2 className="about-services-section-2">Delivery Services</h2>
+              <h2 className="about-services-section-2">Technical Services</h2>
             </div>
           </div>
           <div className="transition-section-2-about shadow">
             <div className="__div_section-2-child-about">
               <div>
                 <FontAwesomeIcon
-                  icon={faExchangeAlt}
+                  icon={faQuestion}
                   className="about-icons-section-2"
                 />
               </div>
-              <h2 className="about-services-section-2 ">Shipping & Return</h2>
+              <h2 className="about-services-section-2 ">Support</h2>
             </div>
           </div>
           <div className="transition-section-2-about shadow">
