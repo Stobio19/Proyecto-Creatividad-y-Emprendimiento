@@ -2,42 +2,37 @@ import React, { useState } from "react";
 import "./Home.css";
 import Modal from "react-modal";
 
+// Función para generar la contraseña a partir de la frase y longitud proporcionada
+const generatePassword = (phrase, length) => {
+  let passwordBase = phrase.replace(/\s+/g, ''); // Eliminar espacios en blanco
+  while (passwordBase.length < length) {
+    passwordBase += passwordBase; // Repetir la frase hasta alcanzar la longitud deseada
+  }
+  return passwordBase.substring(0, length); // Recortar a la longitud exacta
+};
+
 export const Home = () => {
-  const [isOpen, setisOpen] = useState(false);
-  const [phrase, setPhrase] = useState("");
-  const [passwordLength, setPasswordLength] = useState("");
-  const [showAnnouncement, setShowAnnouncement] = useState(false);
-  const [password, setPassword] = useState(""); 
+  const [isOpen, setIsOpen] = useState(false); // Controla si el modal está abierto
+  const [phrase, setPhrase] = useState(""); // Almacena la frase proporcionada
+  const [passwordLength, setPasswordLength] = useState(""); // Almacena la longitud de la contraseña
+  const [showAnnouncement, setShowAnnouncement] = useState(false); // Controla si se muestra el modal
+  const [password, setPassword] = useState(""); // Almacena la contraseña generada
 
   const togglePopUp = () => {
-    setisOpen(isOpen);
-    setShowAnnouncement(false);
+    setIsOpen(!isOpen);  // Alterna entre abrir y cerrar el modal
+    setShowAnnouncement(false);  // Oculta el anuncio al cerrar el modal
   };
 
-  const handleAnnouncement = async (event) => {
-    if (phrase.trim() !== "" && passwordLength.trim() !== "") {
-      event.preventDefault();
-      fetch("https://generador-de-contrasenas.onrender.com/GENERAR_CONTRASENA", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          frase: phrase,
-          longitud: passwordLength,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          setPassword(data);
-        }
-        );
-      setShowAnnouncement(true);
-      setTimeout(() => {
-        setShowAnnouncement(false);
-      }, 10000);
+  const handleAnnouncement = (event) => {
+    event.preventDefault();
+    if (phrase.trim() !== "" && passwordLength.trim() !== "" && Number(passwordLength) > 14) {
+      // Generar la contraseña internamente
+      const generatedPassword = generatePassword(phrase, Number(passwordLength));
+      setPassword(generatedPassword); // Actualizar el estado con la contraseña generada
+      setShowAnnouncement(true); // Mostrar el modal
+      setIsOpen(true); // Asegurarse de que el modal se abra
     } else {
-      alert("¡Please, fill the fields!");
+      alert("¡Please, fill the fields and ensure password length is greater than 14!");
     }
   };
 
@@ -47,12 +42,7 @@ export const Home = () => {
         <h1>Try Us!</h1>
         <div className="div-main-form-content">
           <h2>Enter Your Data!</h2>
-          <form className="main-form"
-          onSubmit={(event) => {
-            handleAnnouncement(event);
-          }
-          }
-          >
+          <form className="main-form" onSubmit={handleAnnouncement}>
             <label>Enter your phrase!</label>
             <input
               placeholder="Phrase"
@@ -64,24 +54,24 @@ export const Home = () => {
                   setPhrase(phrase); // Actualiza el estado si hay 2 o menos espacios
                 }
               }}
-            ></input>
+            />
             <label>Number greater than 14</label>
             <input
               placeholder="Number..."
               required
               type="number"
-              min = "14"
+              min="14"
               onChange={(event) => setPasswordLength(event.target.value)}
-            ></input>
+            />
             <button type="submit">
               Send
             </button>
             {showAnnouncement && (
-              <Modal isOpen={showAnnouncement} className="modal-content">
+              <Modal isOpen={isOpen} onRequestClose={togglePopUp} className="modal-content">
                 <div className="modal-content-div">
                   <h2>YOUR SECURITY PASSWORD</h2>
                   <div className="content">
-                    <p>{password}</p>
+                    <p>{password}</p> {/* Aquí se muestra la contraseña generada */}
                   </div>
                   <button className="close-modal" onClick={togglePopUp}>
                     Close
